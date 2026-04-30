@@ -10,10 +10,11 @@ import {
   Label,
   TextField,
 } from "@heroui/react";
-import { date } from "better-auth";
+
 import Link from "next/link";
 
-import { FaGoogle } from "react-icons/fa";
+
+import { FcGoogle } from "react-icons/fc";
 import { toast } from "react-toastify";
 
 const LoginPage = () => {
@@ -82,7 +83,7 @@ const LoginPage = () => {
           <Description>
             Must be at least 8 characters <br />
             <Link href="/register">
-              <span className="text-red-500 underline font-bold">
+              <span className="underline font-bold">
                 Register Now
               </span>
             </Link>
@@ -103,7 +104,7 @@ const LoginPage = () => {
           variant="outline"
           className="w-full  font-bold"
         >
-          <FaGoogle className="text-blue-500" />
+          <FcGoogle className="text-blue-500" />
           Google Login
         </Button>
       </Form>

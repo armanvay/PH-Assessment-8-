@@ -88,7 +88,7 @@ console.log(data,error)
           <Description>
             Must be at least 8 characters <br />
             <Link href="/login">
-              <span className="text-red-500 underline font-bold">
+              <span className=" underline font-bold">
                 Login Now
               </span>
             </Link>
