@@ -4,17 +4,17 @@ import Image from "next/image";
 import Link from "next/link";
 import logos from "@/acsst/logo.png"
 import { authClient } from "@/lib/auth-client";
+import { Puff } from "react-loader-spinner";
 
 
 
 
 
 const Navbar = () => {
-   const userData = authClient.useSession();
-   const user = userData.data?.user;
-   console.log(user)
+   const { data, isPending } = authClient.useSession();
+  const user = data?.user;
    
-
+ 
 const handellogout=async()=>{
   await authClient.signOut();
 }
@@ -42,14 +42,27 @@ const handellogout=async()=>{
           </Link>
         </div>
 
-        {/* Buttons */}
-        {!user ? (
-          <div className=" md:flex items-center gap-3">
+        {isPending ? (
+          <Puff
+            visible={true}
+            height="40"
+            width="40"
+            color="#9C908E"
+            ariaLabel="puff-loading"
+            wrapperStyle={{}}
+            wrapperClass=""
+          />
+        ) : !user ? (
+          <div className="md:flex items-center gap-3">
             <Link href="/login">
-              <Button variant="outline">Login</Button>
+              <Button className="border-blue-500 font-bold hover:bg-blue-500 hover:text-white" variant="outline">
+                Login
+              </Button>
             </Link>
             <Link href="/register">
-              <Button variant="outline">Register</Button>
+              <Button className="border-blue-500 font-bold hover:bg-blue-500 hover:text-white" variant="outline">
+                Register
+              </Button>
             </Link>
           </div>
         ) : (
@@ -58,8 +71,9 @@ const handellogout=async()=>{
               <Avatar.Image alt={user?.name} src={user?.image} />
               <Avatar.Fallback>{user?.name}</Avatar.Fallback>
             </Avatar>
-              <Button onClick={handellogout} variant="danger">Logout</Button>
-            
+            <Button onClick={handellogout} variant="danger">
+              Logout
+            </Button>
           </div>
         )}
       </div>

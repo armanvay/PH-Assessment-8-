@@ -30,15 +30,13 @@ const RegisterPage = () => {
       image: photo,
       callbackURL: "/",
     });
-    if (data) {
-      toast.success(`Loing SuccessFull`);
-       router.push("/");
+ if (data) {
+   toast.success(`Welcome, ${name}! Registration Successful.`);
+   router.push("/");
 
-    }
-
-    else if (error) {
-      toast.warning("Login Fail");
-    }
+ } else if (error) {
+  toast.error(error.message || "Registration failed. Please try again.");
+ }
 console.log(data,error)
   };
   return (
