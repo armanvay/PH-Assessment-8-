@@ -39,7 +39,7 @@ const instructors = [
 const TopInstructors = () => {
   return (
     <section className="max-w-7xl mx-auto px-10 mb-10">
-      {/* Header */}
+     
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-xl font-bold">Top Instructors</h2>
         <button className="text-sm text-blue-600 hover:underline">
@@ -47,14 +47,14 @@ const TopInstructors = () => {
         </button>
       </div>
 
-      {/* Grid */}
+    
       <div className="grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
         {instructors.map((item) => (
           <div
             key={item.id}
             className="bg-blue-100 cursor-pointer border-2 border-blue-300 shadow-md rounded-xl p-5 text-center hover:shadow-lg transition"
           >
-            {/* Avatar */}
+           
             <div className="flex justify-center mb-3">
               <Image
                 src={item.img}
