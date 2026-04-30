@@ -55,18 +55,25 @@ const handellogout=async()=>{
         ) : !user ? (
           <div className="md:flex items-center gap-3">
             <Link href="/login">
-              <Button className="border-blue-500 font-bold hover:bg-blue-500 hover:text-white" variant="outline">
+              <Button
+                className="border-blue-500 font-bold hover:bg-blue-500 hover:text-white"
+                variant="outline"
+              >
                 Login
               </Button>
             </Link>
             <Link href="/register">
-              <Button className="border-blue-500 font-bold hover:bg-blue-500 hover:text-white" variant="outline">
+              <Button
+                className="border-blue-500 font-bold hover:bg-blue-500 hover:text-white"
+                variant="outline"
+              >
                 Register
               </Button>
             </Link>
           </div>
         ) : (
           <div className="flex items-center gap-3">
+            <Button>Hi Dear {user?.name}</Button>
             <Avatar>
               <Avatar.Image alt={user?.name} src={user?.image} />
               <Avatar.Fallback>{user?.name}</Avatar.Fallback>
