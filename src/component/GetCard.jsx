@@ -11,9 +11,9 @@ const GetCard = async() => {
      console.log(final)
     return (
       <div className="max-w-7xl mx-auto py-10">
-        <div className="flex max-w-6xl mx-auto justify-between items-center mb-8">
+        <div className="md:flex max-w-6xl mx-auto justify-between items-center mb-8">
           <div></div>
-          <h1 className="font-bold text-3xl text-center ml-15 ">
+          <h1 className=" font-bold text-3xl text-center ml-[60px] ">
             Popular Courses
           </h1>
           <Link href={"/courses"}>

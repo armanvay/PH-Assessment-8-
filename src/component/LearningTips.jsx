@@ -30,7 +30,9 @@ const tips = [
 const LearningTips = () => {
   return (
     <section className="max-w-7xl mx-auto px-4 md:px-12 mb-10 ">
-      <h2 className="text-2xl font-bold mb-6 text-center">Learning Tips</h2>
+      <h2 className="animate__animated animate__slideInDown animate__infinite text-2xl font-bold mb-6 text-center">
+        Learning Tips
+      </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
         {tips.map((item) => (

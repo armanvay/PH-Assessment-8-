@@ -29,9 +29,9 @@ const LoginPage = () => {
       callbackURL: "/",
     });
     if (data) {
-      toast.success(`Welcome, ${name}! Registration Successful.`);
+      toast.success(`Welcome, ${name}! Login Successful.`);
     } else if (error) {
-      toast.error(error.message || "Registration failed. Please try again.");
+      toast.error(error.message || "Login  failed. Please try again.");
     }
   };
 

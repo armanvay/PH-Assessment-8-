@@ -4,7 +4,7 @@ import { FaStar } from "react-icons/fa";
 import Link from 'next/link';
 const CourseCard = ({ course }) => {
   return (
-    <div className="bg-white hover:border-blue-100 hover:border rounded-xl shadow-md overflow-hidden hover:shadow-lg transition w-full max-w-75 h-full flex flex-col">
+    <div className="bg-white hover:border-blue-200 hover:border rounded-xl shadow-md overflow-hidden hover:shadow-lg transition w-full max-w-75 h-full flex flex-col">
       {/* Image */}
       <div className="relative h-40 w-full">
         <Image
