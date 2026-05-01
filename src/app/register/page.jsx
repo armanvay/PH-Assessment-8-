@@ -52,7 +52,7 @@ console.log(data,error)
           <FieldError />
         </TextField>
         <TextField isRequired name="photo" type="text">
-          <Label className="font-bold">Url</Label>
+          <Label className="font-bold">Photo Url</Label>
           <Input placeholder="Your Photo Url" />
           <FieldError />
         </TextField>
