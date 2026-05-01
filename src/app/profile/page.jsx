@@ -4,7 +4,7 @@ import ModalCard from "@/component/ModalCard";
 import { authClient } from "@/lib/auth-client";
 import { Avatar, Card } from "@heroui/react";
 import React from "react";
-import { FaEdit, FaUser,  } from "react-icons/fa";
+import {  FaUser,  } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
 const ProfilePage = () => {
