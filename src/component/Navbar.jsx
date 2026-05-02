@@ -39,36 +39,41 @@ const Navbar = () => {
           </Link>
         </div>
 
-   
         <div className="hidden md:flex items-center gap-8 font-medium">
           <Link
             href="/"
-            className={isActive("/") ? "text-indigo-600 font-bold underline" : ""}
+            className={
+              isActive("/") ? "text-indigo-600 font-bold underline" : ""
+            }
           >
             Home
           </Link>
 
           <Link
             href="/courses"
-            className={isActive("/courses") ? "text-indigo-600 font-bold underline" : ""}
+            className={
+              isActive("/courses") ? "text-indigo-600 font-bold underline" : ""
+            }
           >
             Courses
           </Link>
 
           <Link
             href="/profile"
-            className={isActive("/profile") ? "text-indigo-600 font-bold underline" : ""}
+            className={
+              isActive("/profile") ? "text-indigo-600 font-bold underline" : ""
+            }
           >
             My Profile
           </Link>
         </div>
 
-        
         <div className="hidden md:flex items-center gap-3">
           {isPending ? (
             <Puff height="35" width="35" color="#9C908E" />
           ) : !user ? (
             <>
+           
               <Link href="/login">
                 <Button>Login</Button>
               </Link>
@@ -97,7 +102,6 @@ const Navbar = () => {
         </div>
       </div>
 
-     
       {open && (
         <div className="md:hidden px-4 pb-4 bg-white shadow space-y-4">
           {/* Nav Links */}
@@ -105,7 +109,9 @@ const Navbar = () => {
             <Link
               onClick={closeMenu}
               href="/"
-              className={isActive("/") ? "text-indigo-600 font-bold underline" : ""}
+              className={
+                isActive("/") ? "text-indigo-600 font-bold underline" : ""
+              }
             >
               Home
             </Link>
@@ -114,7 +120,9 @@ const Navbar = () => {
               onClick={closeMenu}
               href="/courses"
               className={
-                isActive("/courses") ? "text-indigo-600 font-bold underline" : ""
+                isActive("/courses")
+                  ? "text-indigo-600 font-bold underline"
+                  : ""
               }
             >
               Courses
@@ -124,7 +132,9 @@ const Navbar = () => {
               onClick={closeMenu}
               href="/profile"
               className={
-                isActive("/profile") ? "text-indigo-600 font-bold underline" : ""
+                isActive("/profile")
+                  ? "text-indigo-600 font-bold underline"
+                  : ""
               }
             >
               My Profile

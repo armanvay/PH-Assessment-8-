@@ -1,3 +1,4 @@
+import Marquee from "react-fast-marquee";
 import { FaCalendarAlt, FaCheckCircle, FaCode, FaCoffee } from "react-icons/fa";
 
 const tips = [
@@ -33,21 +34,22 @@ const LearningTips = () => {
       <h2 className="animate__animated animate__slideInDown animate__infinite text-2xl font-bold mb-6 text-center">
         Learning Tips
       </h2>
+      <Marquee>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          {tips.map((item) => (
+            <div
+              key={item.id}
+              className="p-6 rounded-xl shadow-md bg-blue-100 cursor-pointer hover:border-blue-500 hover:border hover:shadow-xl transition"
+            >
+              <div className="text-3xl text-purple-600 mb-3">{item.icon}</div>
 
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-        {tips.map((item) => (
-          <div
-            key={item.id}
-            className="p-6 rounded-xl shadow-md bg-blue-100 cursor-pointer hover:border-blue-500 hover:border hover:shadow-xl transition"
-          >
-            <div className="text-3xl text-purple-600 mb-3">{item.icon}</div>
+              <h3 className="font-semibold text-lg mb-2">{item.title}</h3>
 
-            <h3 className="font-semibold text-lg mb-2">{item.title}</h3>
-
-            <p className="text-gray-500 text-sm">{item.desc}</p>
-          </div>
-        ))}
-      </div>
+              <p className="text-gray-500 text-sm">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </Marquee>
     </section>
   );
 };
