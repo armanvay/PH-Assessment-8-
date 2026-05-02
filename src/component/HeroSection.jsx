@@ -1,12 +1,13 @@
+
 import Image from "next/image";
 import React from "react";
-import hero from "@/acsst/hero.png"
+import hero from "@/acsst/hero.png";
 
 const HeroSection = () => {
   return (
     <section className="w-full py-16">
       <div className="max-w-6xl bg-blue-50 p-4 rounded shadow mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-10">
-        
+        {/* LEFT CONTENT */}
         <div className="flex-1">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
             Upgrade Your Skills Today
@@ -28,9 +29,9 @@ const HeroSection = () => {
           </div>
         </div>
 
-       
-        <div className="flex-1 flex justify-center">
-          <div className="relative bg-blue-50 w-full h-80">
+        {/* RIGHT IMAGE */}
+        <div className="flex-1 flex justify-center w-full mt-6 md:mt-0">
+          <div className="relative bg-blue-50 w-full h-[220px] sm:h-[260px] md:h-80">
             <Image
               src={hero}
               alt="Student learning"
