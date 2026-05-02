@@ -5,4 +5,4 @@ export const authClient = createAuthClient({
 });
 
 export const { signIn, signUp, useSession } = createAuthClient();
-// baseURL: process.env.BETTER_AUTH_URL
+  //baseURL: process.env.BETTER_AUTH_URL
