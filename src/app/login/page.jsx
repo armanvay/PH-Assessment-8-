@@ -29,7 +29,7 @@ const LoginPage = () => {
       callbackURL: "/",
     });
     if (data) {
-      toast.success(`Welcome, ${name}! Login Successful.`);
+     toast.success(`Login Successful`);
     } else if (error) {
       toast.error(error.message || "Login  failed. Please try again.");
     }

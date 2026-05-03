@@ -14,7 +14,7 @@ const GetCard = async() => {
         <div className="md:flex max-w-6xl mx-auto justify-between items-center mb-8">
           <div></div>
           <h1 className=" font-bold text-3xl text-center ml-15 ">
-            Popular Courses
+            Trending Courses
           </h1>
           <Link href={"/courses"}>
             <p className="font-bold cursor-pointer text-blue-500 hover:underline">

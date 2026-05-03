@@ -41,7 +41,6 @@ const CourseDetails = async ({ params }) => {
 
           <p className="text-gray-700">{course.description}</p>
 
-          {/* ✅ NEW: Course Curriculum */}
           <div className="mt-6">
             <h2 className="text-xl font-bold mb-3">Course Curriculum</h2>
 
